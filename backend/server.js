@@ -7,7 +7,8 @@ var logger = require('morgan');
 var knex = require('./db/knex');
 
 var index = require('./routes/indexRoutes');
-var todos = require('./routes/todosRoutes');
+var characters = require('./routes/characterRoutes');
+var scenarios = require('./routes/scenarioRoutes');
 
 var app = express();
 
@@ -20,7 +21,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', index);
-app.use('/todos', todos);
+app.use('/characters', characters);
+app.use('/scenarios', scenarios);
 
 app.listen(port, function() {
 console.log("listening on port: ", port);
