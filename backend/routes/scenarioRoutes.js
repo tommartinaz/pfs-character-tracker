@@ -5,7 +5,7 @@ var knex = require('../db/knex');
 /* GET home page. */
 router.get('/', (req, res) => {
     knex('scenarios')
-        .select('scenarios.id', 'scenarios.title', 'characters.name')
+        .select('scenarios.id', 'scenarios.title', 'characters.name', 'characters.id as char_id')
         .leftJoin('characters', 'scenarios.character_id', 'characters.id')
         .then(scenarios => {
             res.send(scenarios)
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     knex('scenarios')
-        .select('scenarios.id', 'scenarios.title', 'characters.name')
+        .select('scenarios.id', 'scenarios.title', 'characters.id as char_id', 'characters.name')
         .leftJoin('characters', 'scenarios.character_id', 'characters.id')
         .where('scenarios.id', req.params.id)
         .then(scenarios => {
