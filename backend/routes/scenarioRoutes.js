@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
     knex('scenarios')
         .select('scenarios.id', 'scenarios.title', 'characters.name', 'characters.id as char_id')
         .leftJoin('characters', 'scenarios.character_id', 'characters.id')
+        .orderBy('scenarios.id')
         .then(scenarios => {
             res.send(scenarios)
         })
@@ -22,7 +23,7 @@ router.get('/:id', (req, res) => {
         })
 })
 
-router.put('/:id', (req, res) => {
+router.post('/:id', (req, res) => {
     knex('scenarios')
         .update(req.body)
         .where('id', req.params.id)

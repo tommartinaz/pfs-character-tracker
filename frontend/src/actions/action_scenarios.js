@@ -8,3 +8,10 @@ export const getAllScenarios = () => {
         payload: axios.get(BASE_URL)
     }
 }
+
+export const addCharToScenario = (vals) => {
+    return {
+        type: 'ADD_CHAR_TO_SCENARIO',
+        payload: axios.post(`${BASE_URL}/${vals.scenario_id}`, {character_id: vals.values.char_id})
+    }
+}

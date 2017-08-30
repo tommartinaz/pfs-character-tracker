@@ -9,6 +9,9 @@ var knex = require('./db/knex');
 var index = require('./routes/indexRoutes');
 var characters = require('./routes/characterRoutes');
 var scenarios = require('./routes/scenarioRoutes');
+var races = require('./routes/raceRoutes');
+var classes = require('./routes/classRoutes');
+var alignments = require('./routes/alignmentRoutes');
 
 var app = express();
 
@@ -23,6 +26,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', index);
 app.use('/characters', characters);
 app.use('/scenarios', scenarios);
+app.use('/races', races);
+app.use('/alignments', alignments);
+app.use('/classes', classes);
 
 app.listen(port, function() {
 console.log("listening on port: ", port);

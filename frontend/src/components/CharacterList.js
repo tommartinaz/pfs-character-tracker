@@ -1,36 +1,50 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {Card, CardTitle, Row, Col} from 'reactstrap';
+import {Card, CardTitle, Row, Col, Button} from 'reactstrap';
 import _ from 'lodash';
-import * as characterActions from '../actions/action_character';
 
 class CharacterList extends Component {
 
     charList() {
-        console.log("State", this.props)
         return _.map(this.props.characters, character => {
             return (
-                <Link to={`/characters/${character.id}`} key={character.id}>
-                    <Row>
-                        <Col>
-                            <Card light style={{backgroundColor: '#bbb'}}>
-                                {character.name}
-                            </Card>
-                        </Col>
-                    </Row>
-                </Link>
+                <Card
+                    key={character.id}
+                    style={{
+                    backgroundColor: '#bbb'
+                }}>
+                    <CardTitle>
+                        <Link to={`/characters/${character.id}`}>
+                            {character.name}
+                        </Link>
+                    </CardTitle>
+                </Card>
             )
         })
     }
 
     render() {
-        console.log("STATE IN CHARS", this.state)
         return (
             <div>
-                <ul>
-                    {this.charList()}
-                </ul>
+                <Col sm='4' md='4' lg='9'>
+                    <h4>My Characters</h4>
+                    <div
+                        style={{
+                        height: '400px',
+                        overflowY: "scroll"
+                    }}>
+                        <ul>
+                            {this.charList()}
+                        </ul>
+                    </div>
+                </Col>
+                <Col>
+                <Link to='/characters/new'>
+                    <Button outline color='info'>
+                        Add a character</Button>
+                        </Link>
+                </Col>
             </div>
         )
     }

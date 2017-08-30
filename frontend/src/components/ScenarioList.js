@@ -3,30 +3,39 @@ import _ from 'lodash';
 import {connect} from 'react-redux';
 import {Row, Col} from 'reactstrap';
 import { Link } from 'react-router-dom';
-import {Nav, NavItem, NavLink} from 'reactstrap'
+import {Card, CardTitle} from 'reactstrap'
 
 class ScenarioList extends Component {
-    constructor() {
-        super();
-    }
     ScenarioList() {
         return _.map(this.props.scenarios, scenario => {
             return (
-                <NavLink href={`/scenarios/${scenario.id}`} key={scenario.id}>
-                        <li>{scenario.title}</li>
-                    </NavLink>
-            )
-        })
-    }
-    availableScenarios() {
-        let availScenario = _.filter(this.props.scenarios, scenario => !scenario.name)
-        console.log("AVAIL", availScenario);
-        return _.map(availScenario, scenario => {
-            return (
-                <NavLink href={`/scenarios/${scenario.id}`}><li key={scenario.id}>
-                    {scenario.title}
-                </li>
-                </NavLink>
+                <div key={scenario.id}>
+                {scenario.name &&<Card
+                    style={{
+                        backgroundColor: '#bbb'
+                    }}
+                >
+                    <Link to={`/scenarios/${scenario.id}`}>
+                        <CardTitle style={{textDecoration: 'line-through'}}>
+                        {scenario.title}
+                        </CardTitle>
+                    </Link>
+                </Card> }
+                {!scenario.name && 
+                    <Card
+                    style={{
+                        backgroundColor: '#3e7'
+                    }}
+                    key={scenario.id}
+                >
+                    <Link to={`/scenarios/${scenario.id}`}>
+                        <CardTitle>
+                        {scenario.title}
+                        </CardTitle>
+                    </Link>
+                </Card>
+}
+                </div>
             )
         })
     }
@@ -34,15 +43,9 @@ class ScenarioList extends Component {
         return (
             <Row>
                 <Col>
-                    <h3>All scenarios</h3>
-                    <ul>
+                    <h4>All scenarios</h4>
+                    <ul  style={{overflowY: 'scroll', height: '600px'}}>
                         {this.ScenarioList()}
-                    </ul>
-                </Col>
-                <Col>
-                    <h3>Scenarios available to play</h3>
-                    <ul>
-                        {this.availableScenarios()}
                     </ul>
                 </Col>
             </Row>
