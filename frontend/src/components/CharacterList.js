@@ -12,8 +12,9 @@ class CharacterList extends Component {
                 <Card
                     key={character.id}
                     style={{
-                    backgroundColor: '#bbb'
-                }}>
+                        opacity: 0.75,
+                        backgroundColor: '#9FBEA0'
+                    }}>
                     <CardTitle>
                         <Link to={`/characters/${character.id}`}>
                             {character.name}
@@ -38,12 +39,6 @@ class CharacterList extends Component {
                             {this.charList()}
                         </ul>
                     </div>
-                </Col>
-                <Col>
-                <Link to='/characters/new'>
-                    <Button outline color='info'>
-                        Add a character</Button>
-                        </Link>
                 </Col>
             </div>
         )

@@ -23,3 +23,19 @@ export const newChar = (vals) => {
         payload: axios.post(`${BASE_URL}`, vals)
     }
 }
+
+export const delChar = (vals) => {
+    console.log("DEL_CHAR_ACTION", vals)
+    return {
+        type: "DEL_CHAR",
+        payload: axios.post(`${BASE_URL}/delete/${vals}`)
+    }
+}
+
+export const addScenarioToChar = (vals) => {
+    console.log("ACTION_ADD_CHAR_TO_SCEN", vals)
+    return {
+        type: 'ADD_SCENARIO_TO_CHAR',
+        payload: axios.post(`http://localhost:8000/scenarios/${vals.id}`, {character_id: vals.char_id})
+    }
+}

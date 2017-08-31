@@ -5,15 +5,16 @@ var knex = require('../db/knex');
 /* GET home page. */
 router.get('/', (req, res) => {
   knex('characters')
-    .select('id', 'name', 'alignment_id', 'race_id', 'class_id')
+    .select('id', 'name', 'alignment_id', 'race_id', 'class_id', 'level')
     .then(character => res.send(character));
 })
 router.get('/details', (req, res) => {
   knex('characters')
-    .select('characters.id', 'characters.name', 'alignments.alignment', 'races.race', 'classes.class')
+    .select('characters.id', 'characters.name', 'alignments.alignment', 'races.race', 'classes.class', 'characters.level')
     .leftJoin('races', 'characters.race_id', 'races.id')
     .leftJoin('alignments', 'characters.alignment_id', 'alignments.id')
     .leftJoin('classes', 'characters.class_id', 'classes.id')
+    .orderBy('characters.id')
     .then(function (characters) {
       res.send(characters);
     });
@@ -31,11 +32,11 @@ router.post('/:id', (req, res) => {
   knex('characters')
   .update(req.body)
   .where('id', req.params.id)
-  .then(res.redirect(`/characters`))
+  .then(res.redirect(`/characters/details`))
 
 })
 
-router.delete('/:id', (req, res) => {
+router.post('/delete/:id', (req, res) => {
   knex('characters')
     .delete()
     .where('id', req.params.id)
@@ -44,7 +45,7 @@ router.delete('/:id', (req, res) => {
 
 router.get('/:id', (req, res) => {
   knex('characters')
-    .select('characters.name', 'alignments.alignment', 'races.race', 'classes.class')
+    .select('characters.name', 'alignments.alignment', 'races.race', 'classes.class', 'characters.level')
     .join('races', 'characters.race_id', 'races.id')
     .join('alignments', 'characters.alignment_id', 'alignments.id')
     .join('classes', 'characters.class_id', 'classes.id')

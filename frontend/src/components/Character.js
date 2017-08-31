@@ -6,15 +6,29 @@ import {
     CardText,
     Row,
     Col,
-    Button
+    Button,
+    CardBlock
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+
+import * as charActions from '../actions/action_character';
+import ScenarioSelector from './ScenarioSelector';
 
 class Character extends Component {
     updateHistory() {
         this.props.history.push(`/characters`)
+    }
+
+    newHistory() {
+        this.props.history.push(`/characters/${this.props.character.id}`)
+    }
+
+    handleDelete(id) {
+        console.log("HANDLE_DELETE", id);
+        this.props.actions.delChar(id)
     }
 
     render() {
@@ -25,22 +39,29 @@ class Character extends Component {
             <div>
                 {this.props.character && <Row>
                     <Col>
-                        <Card>
+                    <h4>Character details</h4>
+                        <Card style={{
+                            backgroundColor: '#9FBEA0',
+                            opacity: 0.75}}>
+                            <CardBlock>
                             <CardTitle>
-                                Name: {this.props.character.name}
+                                Name: {this.props.character.name}<br />
+                                Level: {this.props.character.level}
                             </CardTitle>
-                            <CardSubtitle>
-                                Alignment: {this.props.character.alignment}
-                            </CardSubtitle>
                             <CardText>
-                                {this.props.character.race}
-                                <br/> {this.props.character.class}
+                                <span style={{fontWeight: 'bold'}}>Class:</span> {this.props.character.class}
+                                <br/>
+                                <span style={{fontWeight: 'bold'}}>Race:</span> {this.props.character.race}
+                                <br/> 
+                                <span style={{fontWeight: 'bold'}}>Alignment:</span> {this.props.character.alignment}
                             </CardText>
                             <Link 
                                 to={`/characters/${this.props.character.id}/edit`}
                             >
-                                <Button color='info' size='sm'>Edit</Button>
+                                <Button  color='info' size='sm'>Edit</Button>
                             </Link>
+                            <Button  color='danger' size='sm' onClick={() => {this.handleDelete(this.props.character.id)}}>Delete</Button>
+                            </CardBlock>
                         </Card>
                     </Col>
                     <Col>
@@ -48,6 +69,9 @@ class Character extends Component {
                         <ul>
                             {scenarioList}
                         </ul>
+                        <ScenarioSelector 
+                        char={this.props.character}
+                        history={this.newHistory.bind(this)}/>
                     </Col>
                 </Row>
 }
@@ -64,4 +88,11 @@ const mapStateToProps = (state, props) => {
         scenarios: _.filter(state.scenarios, scenario => scenario.char_id === parseInt(props.match.params.id, 10))
     }
 }
-export default connect(mapStateToProps, null)(Character);
+
+const mapDispatchToProps = (dispatch) => {
+    console.log("MAPDISPATCH", this)
+    return {
+        actions: bindActionCreators(charActions, dispatch)
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Character);

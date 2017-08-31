@@ -12,7 +12,7 @@ class CharacterSelector extends Component {
         this
             .props
             .actions
-            .addCharToScenario({scenario_id: this.props.scenario_id, values})
+            .addCharToScenario({scenario_id: this.props.scenario.id, values})
         this
             .props
             .history()           
@@ -21,7 +21,7 @@ class CharacterSelector extends Component {
     chars() {
         return _.map(this.props.characterList, char => {
             return (
-                <option key={char.id} value={char.id}>{char.name}</option>
+                <option key={char.id} value={char.id}>{char.name} Level {char.level}</option>
             )
         })
     }
@@ -43,8 +43,11 @@ class CharacterSelector extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {characterList: state.characters}
+const mapStateToProps = (state, props) => {
+    return {characterList: _.filter(state.characters, character => {
+        return character.level >= props.scenario.low_level && character.level <= props.scenario.high_level
+    })
+}
 }
 const mapDispatchToProps = (dispatch) => {
     return {

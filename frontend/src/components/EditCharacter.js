@@ -3,7 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {Field, reduxForm} from 'redux-form';
 import {Link} from 'react-router-dom';
-import {Button, Card, CardTitle, CardText} from 'reactstrap';
+import {Button, Card, CardTitle, CardText, Col} from 'reactstrap';
 import * as characterActions from '../actions/action_character';
 import _ from 'lodash';
 
@@ -49,25 +49,35 @@ class EditCharacter extends Component {
         return (
             <div>
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-                    {this.props.character && <Card>
+                    {this.props.character && 
+                    <Col sm='4' md='4' lg='6'>
+                    <Card style={{backgroundColor: '#9FBEA0', opacity: 0.75}}>
                         <CardTitle>
+                            Name: 
                             <Field
                                 name='name'
                                 component='input'
                                 type='text'
                                 placeholder={this.props.character.name}/>
                         </CardTitle>
+                        Class: 
                         <Field name='class' defaultValue={this.props.character.class_id} component='select'>
                             <option/> {this.classes()};
                         </Field>
+                        Race:
                         <Field name='race' defaultValue={this.props.character.race_id} component='select'>
                             <option/> {this.races()};
                         </Field>
+                        Alignment:
                         <Field name='alignment' defaultValue={this.props.character.alignment_id} component='select'>
                             <option/> {this.alignments()};
                         </Field>
-                    </Card>}
-                    <Button type='submit'>Submit</Button>
+                    </Card>
+                    <Button color='info' type='submit'>Submit</Button>
+                    <Link to={`/characters/${this.props.character.id}`}>
+                        <Button color='warning'>Cancel</Button>
+                    </Link>
+                    </Col>}
                 </form>
             </div>
         )

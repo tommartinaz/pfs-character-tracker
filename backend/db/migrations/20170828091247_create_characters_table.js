@@ -4,9 +4,10 @@ exports.up = function(knex, Promise) {
         table.string('name').notNullable();
         table.integer('race_id');
         table.integer('class_id');
-        table.integer('alignment_id')
-        table.timestamps(true, true)
-    }) 
+        table.integer('alignment_id');
+        table.integer('level');
+        table.timestamps(true, true);
+    })
 };
 
 exports.down = function(knex, Promise) {

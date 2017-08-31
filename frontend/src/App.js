@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
-import {Route, Router} from 'react-router-dom';
+import {Route, Router, Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {Row, Col} from 'reactstrap';
+import {Row, Col, Button} from 'reactstrap';
 import createHistory from 'history/createBrowserHistory';
 
 import * as charActions from './actions/action_character';
@@ -20,6 +20,18 @@ import ScenarioList from './components/ScenarioList';
 import Scenario from './components/Scenario';
 import EditCharacter from './components/EditCharacter';
 import NewCharacter from './components/NewCharacter';
+
+const addCharButton = () =>{
+  return (
+      <div>
+        <br />
+      <Link to='/characters/new'>
+          <Button color='info'>
+              Add a character</Button>
+              </Link>
+      </div>
+)
+}
 
 class App extends Component {
   componentDidMount() {
@@ -38,15 +50,21 @@ class App extends Component {
   
   render() {
     const history = createHistory();
+    const style = {
+      // backgroundColor: "#A7B599",
+      height: '100vh',
+      width: '100vw'
+    }
     return (
       <Router history={history}>
-      <div>
+      <div style={style}>
         <NavB/>
         <Row>
-            <Route exact path='/' component={Welcome}/>
           <Col sm='8' md='8' lg='4'>
+            <Route exact path='/' component={Welcome}/>
             <Route path='/scenarios' component={ScenarioList}/>
             <Route path='/characters' component={CharacterList}/>
+            <Route exact path='/characters' component={addCharButton}/>
           </Col>
           <Col sm='4' md='4' lg='8'>
             <Route exact path='/scenarios/:id' component={Scenario} />
@@ -55,6 +73,23 @@ class App extends Component {
             <Route exact path='/characters/new' component={NewCharacter} />
           </Col>
         </Row>
+        <footer 
+          id='footer'
+          style={{
+            position: 'fixed', 
+            bottom: '0px', 
+            width: '100vw', 
+            backgroundColor: "#9FBEA0"}}
+        >
+          <div 
+            style={{
+              position: 'relative',
+              left: '50px'
+            }}
+          >
+            ©Tom Martin
+          </div>
+        </footer>
       </div>
       </Router>
     );

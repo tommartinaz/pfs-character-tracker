@@ -3,7 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {Field, reduxForm} from 'redux-form';
 import {Link} from 'react-router-dom';
-import {Button, Card, CardTitle, CardText} from 'reactstrap';
+import {Button, Card, CardTitle, CardText, Col} from 'reactstrap';
 import * as characterActions from '../actions/action_character';
 import _ from 'lodash';
 
@@ -49,25 +49,38 @@ class EditCharacter extends Component {
         return (
             <div>
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-                    {this.props.alignments && <Card>
+                    {this.props.alignments && 
+                    <Col sm='4' md='4' lg='6'>
+                    <Card style={{
+                        backgroundColor: '#9FBEA0',
+                        opacity: 0.75
+                    }}>
                         <CardTitle>
+                            Name: <br/>
                             <Field
                                 name='name'
                                 component='input'
                                 type='text'
                             />
                         </CardTitle>
+                        Class: 
                         <Field name='class' component='select'>
                             <option/> {this.classes()};
                         </Field>
+                        Race:
                         <Field name='race' component='select'>
                             <option/> {this.races()};
                         </Field>
+                        Alignment:
                         <Field name='alignment' component='select'>
                             <option/> {this.alignments()};
                         </Field>
-                    </Card>}
-                    <Button type='submit'>Submit</Button>
+                    </Card>
+                    <Button color='success' type='submit'>Submit</Button>
+                    <Link to='/characters'>
+                        <Button color='warning'>Cancel</Button>
+                    </Link>
+                    </Col>}
                 </form>
             </div>
         )
