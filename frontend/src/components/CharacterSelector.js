@@ -6,6 +6,8 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import _ from 'lodash';
 
+import font from '../assets/font'
+
 class CharacterSelector extends Component {
 
     onSubmit(values) {
@@ -30,7 +32,7 @@ class CharacterSelector extends Component {
         const {handleSubmit} = this.props;
 
         return (
-            <div>
+            <div style={{fontFamily: font, color: '#000', textShadow: '2px 2px #fff'}}>
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     <Field name='char_id' component='select'>
                         <option/> 

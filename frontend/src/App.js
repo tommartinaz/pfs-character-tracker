@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+import './index.css';
 import {Route, Router, Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
@@ -11,6 +11,7 @@ import * as scenarioActions from './actions/action_scenarios';
 import * as raceActions from './actions/action_races';
 import * as classActions from './actions/action_classes';
 import * as alignmentActions from './actions/action_alignments';
+import font from './assets/font'
 
 import Welcome from './components/Welcome';
 import NavB from './components/Navbar';
@@ -23,7 +24,7 @@ import NewCharacter from './components/NewCharacter';
 
 const addCharButton = () =>{
   return (
-      <div>
+      <div style={{fontFamily: font, color: '#000', textShadow: '2px 2px #fff'}}>
         <br />
       <Link to='/characters/new'>
           <Button color='info'>
@@ -79,7 +80,10 @@ class App extends Component {
             position: 'fixed', 
             bottom: '0px', 
             width: '100vw', 
-            backgroundColor: "#9FBEA0"}}
+            backgroundColor: "#9FBEA0",
+            fontFamily: font,
+            color: '#000',
+            textShadow: '2px 2px #fff'}}
         >
           <div 
             style={{
@@ -87,7 +91,10 @@ class App extends Component {
               left: '50px'
             }}
           >
-            ©Tom Martin <Link to='https://github.com/tommartinaz/pfs-character-tracker'>PFS Character Tracker on Github</Link>
+            ©Tom Martin
+          </div>
+          <div style={{position: 'absolute', top: '0px', left: '250px'}}>
+             <Link style={{color: '#000'}} to='https://github.com/tommartinaz/pfs-character-tracker'>PFS Character Tracker on Github</Link>
           </div>
         </footer>
       </div>

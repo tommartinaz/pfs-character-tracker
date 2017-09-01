@@ -3,13 +3,14 @@ import _ from 'lodash';
 import {connect} from 'react-redux';
 import {Row, Col} from 'reactstrap';
 import {Link} from 'react-router-dom';
-import {Card, CardTitle} from 'reactstrap'
+import {Card, CardTitle} from 'reactstrap';
+import font from '../assets/font'
 
 class ScenarioList extends Component {
     ScenarioList() {
         return _.map(this.props.scenarios, scenario => {
             return (
-                <div key={scenario.id}>
+                <div style={{fontFamily: font, color: '#000', textShadow: '2px 2px #fff'}} key={scenario.id}>
                     {scenario.name &&< Card
                         block
                         style = {{
@@ -22,8 +23,7 @@ class ScenarioList extends Component {
                             style={{
                             textDecoration: 'line-through'
                         }}>
-                            <Link to={`/scenarios/${scenario.id}`}
-                                style={{color: "#000"}}>
+                            <Link to={`/scenarios/${scenario.id}`} style={{color: '#000'}}>
                                 {scenario.title}
                             </Link>
                         </CardTitle> 
@@ -36,8 +36,7 @@ class ScenarioList extends Component {
                     }}
                         key={scenario.id}>
                         <CardTitle>
-                            <Link to={`/scenarios/${scenario.id}`}
-                            style={{color: "#000"}}>
+                            <Link to={`/scenarios/${scenario.id}`} style={{color: '#000'}}>
                                 {scenario.title}
                             </Link>
                         </CardTitle>
@@ -50,7 +49,7 @@ class ScenarioList extends Component {
         return (
             <Row>
                 <Col>
-                    <h4>All scenarios</h4>
+                    <h4 style={{fontFamily: font, color: '#000', textShadow: '2px 2px #fff'}}>All scenarios</h4>
                     <ul
                         style={{
                         overflowY: 'scroll',

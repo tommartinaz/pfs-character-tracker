@@ -5,6 +5,7 @@ import * as characterActions from '../actions/action_character';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import _ from 'lodash';
+import font from '../assets/font';
 
 class ScenarioSelector extends Component {
 
@@ -30,7 +31,7 @@ class ScenarioSelector extends Component {
         const {handleSubmit} = this.props;
 
         return (
-            <div>
+            <div style={{fontFamily: font, color: '#000', textShadow: '2px 2px #fff'}}>
                 {this.props.scenarioList.length !== 0 && <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     <Field name='scenario' component='select'>
                         <option/> 

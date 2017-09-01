@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {Card, CardTitle, Col} from 'reactstrap';
 import _ from 'lodash';
+import font from '../assets/font';
 
 class CharacterList extends Component {
 
@@ -17,7 +18,9 @@ class CharacterList extends Component {
                         border: '1px solid black'
                     }}>
                     <CardTitle>
-                        <Link to={`/characters/${character.id}`} style={{color: "#000"}}>
+                        <Link to={`/characters/${character.id}`}
+                        style={{fontFamily: font, color: '#000', textShadow: '2px 2px #fff'}}>
+
                             {character.name}
                         </Link>
                     </CardTitle>

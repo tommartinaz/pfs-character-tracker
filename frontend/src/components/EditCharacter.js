@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 import {Button, Card, CardTitle, Col} from 'reactstrap';
 import * as characterActions from '../actions/action_character';
 import _ from 'lodash';
+import font from '../assets/font'
 
 class EditCharacter extends Component {
     onSubmit(values, props) {
@@ -14,6 +15,7 @@ class EditCharacter extends Component {
             .actions
             .updateChar({id: this.props.character.id, 
                 name: values.name,
+                level: values.level,
                 class_id: parseInt(values.class, 10), 
                 alignment_id: parseInt(values.alignment, 10), 
                 race_id: parseInt(values.race, 10)})
@@ -47,7 +49,7 @@ class EditCharacter extends Component {
     render() {
         const {handleSubmit} = this.props;
         return (
-            <div>
+            <div style={{fontFamily: font, color: '#000', textShadow: '2px 2px #fff'}}>
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     {this.props.character && 
                     <Col sm='4' md='4' lg='6'>
@@ -60,6 +62,8 @@ class EditCharacter extends Component {
                                 type='text'
                                 placeholder={this.props.character.name}/>
                         </CardTitle>
+                        Level:
+                        <Field name='level' component='input' type='number'/>
                         Class: 
                         <Field name='class' defaultValue={this.props.character.class_id} component='select'>
                             <option/> {this.classes()};

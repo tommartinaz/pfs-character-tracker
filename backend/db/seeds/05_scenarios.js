@@ -46,7 +46,7 @@ exports.seed = function(knex, Promise) {
           "high_level": 5,
           "title": "Mists of Mwangi",
           "description": "Pathfinder Lugizar Trantos recently returned from the Mwangi Expanse with haunted eyes and a pack full of strange idols. Absalom's famed Blakros Museum purchased his pieces and Lugizar vanished. The strange monkey idols he pulled from the misty jungles of Mwangi carry with them a fell curse, and now their power has laid claim to the museum. Can the Pathfinder Society uncover the source of the curse in time, or will the Blackros Museum be forever lost to the mists of Mwangi?",
-          "character_id": 4
+          "character_id": 2
         },
         {
           "scenario_num": 6,
@@ -55,7 +55,7 @@ exports.seed = function(knex, Promise) {
           "high_level": 5,
           "title": "Black Waters",
           "description": "The Pathfinder Society seeks the ancient ruby ring of the salamander and it falls to a team of Pathfinders to find it. Last seen in the Tri-Towers Yard, a once elite academy for the youth of Absalom, the ruby ring is now lost in the Drownyard, all that remains of Tri-Towers after it was destroyed a decade ago in the great quake. The Pathfinders must risk the strange black ichors and salty brine to find their prize—will they risk their very souls as well?",
-          "character_id": 5
+          "character_id": 3
         },
         {
           "scenario_num": 7,
@@ -73,7 +73,7 @@ exports.seed = function(knex, Promise) {
           "high_level": 5,
           "title": "Slave Pits of Absalom",
           "description": "Someone kidnapped Lady Anilah Salhar—the Chelish wife of Dremdhet Salhar, one of Osirion's many Grand Ambassadors to Absalom—and sold her into slavery. With Salhar holding delve permits over the heads of the Decemvirute, the Pathfinders are sent to assist the Osirian Ambassador. Venturing into Absalom's darkest corners to save Lady Anilah, the Pathfinders must face the secrets of the Slave Pits to avoid becoming slaves themselves.",
-          "character_id": 6
+          "character_id": 0
         },
         {
           "scenario_num": 13,
@@ -82,7 +82,7 @@ exports.seed = function(knex, Promise) {
           "high_level": 5,
           "title": "The Prince of Augustana",
           "description": "When an old beggar shows up filthy and injured on the doorstep of the Augustana Pathfinder Lodge in Andoran and demands to be recognized as Andoran's one true Emperor, Venture-Captain Wallace is inclined to chase him off. But when the old beggar reveals a wayfinder and tells a tale of demons and portals to another world beneath the streets of Augustana, Wallace summons you from Absalom to investigate. Will you make it through sewers, swarms, and sanctuaries to uncover the truth or will the dangers of the Augustana underworld consume you forever?",
-          "character_id": 7
+          "character_id": 0
         },
         {
           "scenario_num": 14,
@@ -91,7 +91,7 @@ exports.seed = function(knex, Promise) {
           "high_level": 7,
           "title": "The Many Fortunes of Grandmaster Torch",
           "description": "When four statues of unspeakable power were found in a tomb in Osirion and then stolen, the Pathfinder Society assumed they were gone forever. When they appeared again in the illicit inventory of a Qadiran smuggler in the massive trade city of Sedeq, the Society wasted little time dispatching you there to recover them. Finding the smuggler dead and a familiar face from Absalom responsible, your task quickly becomes a race to retrieve the statues before their brutal power can be unleashed on the citizens of the Satrap. Can you find the statues in time or will Sedeq be swallowed in a plague like none Golarion has ever seen?",
-          "character_id": 8
+          "character_id": 0
         },
         {
           "scenario_num": 16,
@@ -100,7 +100,7 @@ exports.seed = function(knex, Promise) {
           "high_level": 9,
           "title": "To Scale the Dragon",
           "description": "The last remains of a sage from an age long past rests high atop the snow-covered tips of the Fog Peaks in Southern Galt and the Society wants his bones in order to study them and learn from them. They've sent you into a wintry wilderness of primordial beastmen and snow creatures not seen below the snow line to do just that. With the Aspis Consortium also seeking the bones, the race is on to beat them to the top and, once the bones are recovered, to make it back down alive.",
-          "character_id": 8
+          "character_id": 0
         },
         {
           "scenario_num": 17,

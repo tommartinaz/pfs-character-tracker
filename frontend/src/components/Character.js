@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import _ from 'lodash';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import font from '../assets/font'
 
 import * as charActions from '../actions/action_character';
 import ScenarioSelector from './ScenarioSelector';
@@ -30,10 +31,10 @@ class Character extends Component {
     }
 
     render() {
-        const scenarioList = _.map(this.props.scenarios, scenario => <li key={scenario.id}>{scenario.title}</li>
+        const scenarioList = _.map(this.props.scenarios, scenario => <li style={{fontSize: '1.1em'}} key={scenario.id}>{scenario.title}</li>
         )
         return (
-            <div>
+            <div style={{fontFamily: font, color: '#000', textShadow: '2px 2px #fff'}}>
                 {this.props.character && <Row>
                     <Col>
                     <h4>Character details</h4>

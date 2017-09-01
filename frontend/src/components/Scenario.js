@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Card, CardTitle, CardText, Col, CardSubtitle} from 'reactstrap';
 
 import CharacterSelector from './CharacterSelector';
+import font from '../assets/font';
 
 class Scenario extends Component {
     updateHistory() {
@@ -14,7 +15,7 @@ class Scenario extends Component {
                 {backgroundColor: '#bbb', opacity: 0.75, border: '1px solid black'} : {backgroundColor: '#9FBEA0', opacity: 0.75, border: '1px solid black'}) 
                 : {};
         return (
-            <div>
+            <div style={{fontFamily: font, color: '#000', textShadow: '2px 2px #fff'}}>
                 <Col sm='6' md='6' lg='9'>
                     <h4>Details</h4>
                     {this.props.scenario && <div>

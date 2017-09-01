@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar,  NavbarBrand } from 'reactstrap';
+import font from '../assets/font';
 
 export default class NavB extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ export default class NavB extends React.Component {
   render() {
     return (
       <div>
-        <Navbar light style={{ backgroundColor: '#cdc', padding: 0, margins: 0}}>
+        <Navbar light style={{ backgroundColor: '#cdc', padding: 0, margins: 0, fontFamily: font, color: '#000', textShadow: '2px 2px #fff'}}>
           <NavbarBrand href='/' className='active'>Home</NavbarBrand>
           <NavbarBrand href="/characters" className='active'>Characters</NavbarBrand>
           <NavbarBrand href="/scenarios" className='active'>Scenarios</NavbarBrand>
