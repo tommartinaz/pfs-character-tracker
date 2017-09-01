@@ -3,7 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {Field, reduxForm} from 'redux-form';
 import {Link} from 'react-router-dom';
-import {Button, Card, CardTitle, CardText, Col} from 'reactstrap';
+import {Button, Card, CardTitle, Col} from 'reactstrap';
 import * as characterActions from '../actions/action_character';
 import _ from 'lodash';
 
@@ -14,9 +14,9 @@ class EditCharacter extends Component {
             .actions
             .updateChar({id: this.props.character.id, 
                 name: values.name,
-                class_id: parseInt(values.class), 
-                alignment_id: parseInt(values.alignment), 
-                race_id: parseInt(values.race)})
+                class_id: parseInt(values.class, 10), 
+                alignment_id: parseInt(values.alignment, 10), 
+                race_id: parseInt(values.race, 10)})
         this.props.history.push(`/characters/${this.props.character.id}`)
     }
 
@@ -51,7 +51,7 @@ class EditCharacter extends Component {
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     {this.props.character && 
                     <Col sm='4' md='4' lg='6'>
-                    <Card style={{backgroundColor: '#9FBEA0', opacity: 0.75}}>
+                    <Card style={{backgroundColor: '#9FBEA0', opacity: 0.75, border: '1px solid black'}}>
                         <CardTitle>
                             Name: 
                             <Field

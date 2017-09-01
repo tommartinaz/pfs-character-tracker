@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {Card, CardTitle, Row, Col, Button} from 'reactstrap';
+import {Card, CardTitle, Col} from 'reactstrap';
 import _ from 'lodash';
 
 class CharacterList extends Component {
@@ -13,10 +13,11 @@ class CharacterList extends Component {
                     key={character.id}
                     style={{
                         opacity: 0.75,
-                        backgroundColor: '#9FBEA0'
+                        backgroundColor: '#9FBEA0',
+                        border: '1px solid black'
                     }}>
                     <CardTitle>
-                        <Link to={`/characters/${character.id}`}>
+                        <Link to={`/characters/${character.id}`} style={{color: "#000"}}>
                             {character.name}
                         </Link>
                     </CardTitle>

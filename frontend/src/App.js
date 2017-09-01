@@ -87,7 +87,7 @@ class App extends Component {
               left: '50px'
             }}
           >
-            ©Tom Martin
+            ©Tom Martin <Link to='https://github.com/tommartinaz/pfs-character-tracker'>PFS Character Tracker on Github</Link>
           </div>
         </footer>
       </div>

@@ -11,7 +11,7 @@ class Scenario extends Component {
     render() {
         const style = this.props.scenario ? 
             (this.props.scenario.name ? 
-                {backgroundColor: '#bbb', opacity: 0.75} : {backgroundColor: '#9FBEA0', opacity: 0.75}) 
+                {backgroundColor: '#bbb', opacity: 0.75, border: '1px solid black'} : {backgroundColor: '#9FBEA0', opacity: 0.75, border: '1px solid black'}) 
                 : {};
         return (
             <div>
@@ -57,7 +57,6 @@ class Scenario extends Component {
 }
 
 const mapStateToProps = (state, props) => {
-    console.log(state.scenarios[props.match.params.id])
     return {
         scenario: state.scenarios[props.match.params.id]
     }

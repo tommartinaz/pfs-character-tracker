@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
         table.integer('race_id');
         table.integer('class_id');
         table.integer('alignment_id');
-        table.integer('level');
+        table.integer('level').defaultTo(1);
         table.timestamps(true, true);
     })
 };

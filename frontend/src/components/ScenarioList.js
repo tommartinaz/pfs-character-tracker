@@ -14,14 +14,16 @@ class ScenarioList extends Component {
                         block
                         style = {{
                                 opacity: 0.75,
-                                backgroundColor: '#bbb'
+                                backgroundColor: '#bbb',
+                                border: '1px solid black'
                         }}
                     > 
                         <CardTitle
                             style={{
                             textDecoration: 'line-through'
                         }}>
-                            <Link to={`/scenarios/${scenario.id}`}>
+                            <Link to={`/scenarios/${scenario.id}`}
+                                style={{color: "#000"}}>
                                 {scenario.title}
                             </Link>
                         </CardTitle> 
@@ -29,11 +31,13 @@ class ScenarioList extends Component {
                     {!scenario.name && <Card
                         style={{
                         backgroundColor: '#9FBEA0',
-                        opacity: 0.75
+                        opacity: 0.75,
+                        border: '1px solid black'
                     }}
                         key={scenario.id}>
                         <CardTitle>
-                            <Link to={`/scenarios/${scenario.id}`}>
+                            <Link to={`/scenarios/${scenario.id}`}
+                            style={{color: "#000"}}>
                                 {scenario.title}
                             </Link>
                         </CardTitle>

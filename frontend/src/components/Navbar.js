@@ -18,7 +18,7 @@ export default class NavB extends React.Component {
   render() {
     return (
       <div>
-        <Navbar light style={{ backgroundColor: '#cdc'}}>
+        <Navbar light style={{ backgroundColor: '#cdc', padding: 0, margins: 0}}>
           <NavbarBrand href='/' className='active'>Home</NavbarBrand>
           <NavbarBrand href="/characters" className='active'>Characters</NavbarBrand>
           <NavbarBrand href="/scenarios" className='active'>Scenarios</NavbarBrand>

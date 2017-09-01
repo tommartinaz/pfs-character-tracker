@@ -9,7 +9,6 @@ import _ from 'lodash';
 class ScenarioSelector extends Component {
 
     onSubmit(values) {
-        console.log("SCENSELECTOR", values)
         this
             .props
             .actions
@@ -29,25 +28,23 @@ class ScenarioSelector extends Component {
 
     render() {
         const {handleSubmit} = this.props;
-        console.log("PROPS FROM SCEN SEL", this.props)
 
         return (
             <div>
-                <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+                {this.props.scenarioList.length !== 0 && <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                     <Field name='scenario' component='select'>
                         <option/> 
                         {this.scenarios()}
                     </Field>
                     <Field name='char_id' component='hidden' value={this.props.char.id} />
                     <Button className='btn btn-primary' type='submit'>Mark as played</Button>
-                </form>
+                </form>}
             </div>
         )
     }
 }
 
 const mapStateToProps = (state, props) => {
-    console.log("SCENARIO_SELECTOR_FILTER_BY_LEVEL", state.scenarios, props)
     return {scenarioList: _.filter(state.scenarios, (scenario) => {
         return (!scenario.char_id && (scenario.low_level <= props.char.level && scenario.high_level >= props.char.level))
     })

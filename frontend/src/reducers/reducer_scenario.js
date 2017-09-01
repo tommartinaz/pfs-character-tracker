@@ -7,7 +7,6 @@ export default (state = {}, action) => {
         case "ADD_CHAR_TO_SCENARIO_FULFILLED":
             return _.mapKeys(action.payload.data, 'id');
         case 'ADD_SCENARIO_TO_CHAR_FULFILLED':
-            console.log("HEARD ADD SCEN TO CHAR", action.payload.data);
             return _.mapKeys(action.payload.data, 'id')
 
         default:

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {
     Card,
     CardTitle,
-    CardSubtitle,
     CardText,
     Row,
     Col,
@@ -27,12 +26,10 @@ class Character extends Component {
     }
 
     handleDelete(id) {
-        console.log("HANDLE_DELETE", id);
         this.props.actions.delChar(id)
     }
 
     render() {
-        console.log("PROPS", this.props)
         const scenarioList = _.map(this.props.scenarios, scenario => <li key={scenario.id}>{scenario.title}</li>
         )
         return (
@@ -42,7 +39,9 @@ class Character extends Component {
                     <h4>Character details</h4>
                         <Card style={{
                             backgroundColor: '#9FBEA0',
-                            opacity: 0.75}}>
+                            opacity: 0.75,
+                            border: '1px solid black'
+                        }}>
                             <CardBlock>
                             <CardTitle>
                                 Name: {this.props.character.name}<br />
@@ -66,7 +65,7 @@ class Character extends Component {
                     </Col>
                     <Col>
                         <h4>Scenairos played by this character</h4>
-                        <ul>
+                        <ul style={{backgroundColor: '#9FBEA0', border: '1px solid black', opacity: 0.75}}>
                             {scenarioList}
                         </ul>
                         <ScenarioSelector 
@@ -82,7 +81,6 @@ class Character extends Component {
 }
 
 const mapStateToProps = (state, props) => {
-    console.log("CHARACTER_PROPS", props)
     return {
         character: state.characters[props.match.params.id],
         scenarios: _.filter(state.scenarios, scenario => scenario.char_id === parseInt(props.match.params.id, 10))
@@ -90,7 +88,6 @@ const mapStateToProps = (state, props) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    console.log("MAPDISPATCH", this)
     return {
         actions: bindActionCreators(charActions, dispatch)
     }
