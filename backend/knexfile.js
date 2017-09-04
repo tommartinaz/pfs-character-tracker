@@ -1,7 +1,7 @@
 module.exports = {
   development: {
       client: 'pg',
-      connection: 'postgres://localhost/pfscharactertracker',
+      connection: 'postgres://localhost/pfs62911',
       migrations: {
           directory: __dirname + '/db/migrations',
         },
