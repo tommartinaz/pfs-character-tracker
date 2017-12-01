@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Navbar,  NavbarBrand } from 'reactstrap';
 import font from '../assets/font';
 
-export default class NavB extends React.Component {
+export default class NavB extends Component {
   constructor(props) {
     super(props);
 
