@@ -74,29 +74,6 @@ class App extends Component {
             <Route exact path='/characters/new' component={NewCharacter} />
           </Col>
         </Row>
-        <footer 
-          id='footer'
-          style={{
-            position: 'fixed', 
-            bottom: '0px', 
-            width: '100vw', 
-            backgroundColor: "#9FBEA0",
-            fontFamily: font,
-            color: '#000',
-            textShadow: '2px 2px #fff'}}
-        >
-          <div 
-            style={{
-              position: 'relative',
-              left: '50px'
-            }}
-          >
-            ©Tom Martin
-          </div>
-          <div style={{position: 'absolute', top: '0px', left: '250px'}}>
-             <Link style={{color: '#000'}} to='https://github.com/tommartinaz/pfs-character-tracker'>PFS Character Tracker on Github</Link>
-          </div>
-        </footer>
       </div>
       </Router>
     );
