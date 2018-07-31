@@ -14,7 +14,6 @@ class ScenarioList extends Component {
                     {scenario.name &&< Card
                         block
                         style = {{
-                                opacity: 0.75,
                                 backgroundColor: '#bbb',
                                 border: '1px solid black'
                         }}
@@ -31,7 +30,6 @@ class ScenarioList extends Component {
                     {!scenario.name && <Card
                         style={{
                         backgroundColor: '#9FBEA0',
-                        opacity: 0.75,
                         border: '1px solid black'
                     }}
                         key={scenario.id}>

@@ -40,7 +40,6 @@ class Character extends Component {
                     <h4>Character details</h4>
                         <Card style={{
                             backgroundColor: '#9FBEA0',
-                            opacity: 0.75,
                             border: '1px solid black'
                         }}>
                             <CardBlock>
@@ -66,7 +65,7 @@ class Character extends Component {
                     </Col>
                     <Col>
                         <h4>Scenairos played by this character</h4>
-                        <ul style={{backgroundColor: '#9FBEA0', border: '1px solid black', opacity: 0.75}}>
+                        <ul style={{backgroundColor: '#9FBEA0', border: '1px solid black'}}>
                             {scenarioList}
                         </ul>
                         <ScenarioSelector 

@@ -12,7 +12,7 @@ class Scenario extends Component {
     render() {
         const style = this.props.scenario ? 
             (this.props.scenario.name ? 
-                {backgroundColor: '#bbb', opacity: 0.75, border: '1px solid black'} : {backgroundColor: '#9FBEA0', opacity: 0.75, border: '1px solid black'}) 
+                {backgroundColor: '#bbb', border: '1px solid black'} : {backgroundColor: '#9FBEA0', border: '1px solid black'}) 
                 : {};
         return (
             <div style={{fontFamily: font, color: '#000', textShadow: '2px 2px #fff'}}>

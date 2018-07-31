@@ -13,7 +13,6 @@ class CharacterList extends Component {
                 <Card
                     key={character.id}
                     style={{
-                        opacity: 0.75,
                         backgroundColor: '#9FBEA0',
                         border: '1px solid black'
                     }}>
