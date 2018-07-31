@@ -2,6 +2,12 @@ var express = require('express');
 var router = express.Router();
 var knex = require('../db/knex');
 
+router.post('/', (req, res) => {
+    knex('scenarios as s')
+        .insert(req.body)
+        .then(console.log("Hello"))
+});
+
 /* GET home page. */
 router.get('/', (req, res) => {
     knex('scenarios as s')
