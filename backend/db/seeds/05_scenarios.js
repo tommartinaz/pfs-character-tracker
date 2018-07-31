@@ -2072,6 +2072,186 @@ exports.seed = function(knex, Promise) {
           "title": "On the Border of War",
           "description": "Brevoy may seem a united country, but its noble houses are ever on the brink of warfare while King Noleski Surtova struggles to keep the peace and prove his legitimacy. A neutral township's baron has died, and the loyalists of several houses have rekindled old rivalries while maneuvering for their respective lords to control the region. As the noble houses maneuver armies nearby in the name of \"peacekeeping,\" the teeters on the precipice of war. Hostilities could spell the end of a famous ruin that the Society is yet to document, and Pathfinders must travel into the powder keg region to delay hostilities long enough to salvage and study the site. For the truly ambitious, it may be possible to avert the war altogether, but canny nobles as likely to see the PCs as pawns as mediators.",
           "character_id": 0
+        },
+        {
+          "scenario_num": 4,
+          "season": 9,
+          "low_level": 1,
+          "high_level": 5,
+          "character_id": 0,
+          "title": "The Unseen Inclusion",
+          "description": "The Thuvian city of Merab has grown steadily over the past decade, and construction teams have uncovered numerous foundations and features dating back to Ancient Osirion and the Tekritanin League as they break ground for new buildings. Recently, workers accidentally unsealed a haunted ruin, out of which screamed a terrifying apparition. The Society has sent the PCs to investigate, not only to learn about the newly discovered ruin, but also to put this angry spirit to rest. In the process, the Pathfinders will uncover more than part of Thuvia's past; they'll unravel a dire secret that even now threatens one of the Society's closest allies."
+        },
+        {
+          "scenario_num": 5,
+          "season": 9,
+          "low_level": 3,
+          "high_level": 7,
+          "character_id": 0,
+          "title": "Call of the Copper Gate",
+          "description": "Alarm bells blare throughout the Pathfinder Society's Grand Lodge as chaos reigns in one of the vaults below. The PCs must venture into the vaults to put a stop to the mysterious incident. They quickly learn, however, that what has happened in the Grand Lodge is almost certainly not an isolated event. It falls to the PCs to follow this disruption's trail, a mission that puts them on a collision course with mysterious forces that wish to unleash horrors from beyond reality upon Golarion."
+        },
+        {
+          "scenario_num": 6,
+          "season": 9,
+          "low_level": 1,
+          "high_level": 5,
+          "character_id": 0,
+          "title": "The Shores of Heaven",
+          "description": "The Pathfinder Valais Durant has lead a troubled existence, ever since the demon-worshipping former venture-captain Thurl fused her body with parts from two demons. Pathfinder agents destroyed one of the demons, bringing some solace to Valais and allowing her to resume a somewhat normal life. However, the remaining demon's essence recently asserted control in an event that could have resulted in great bloodshed were it not for Valais's quick thinking. If the Pathfinders are to restore her to her original form, they need help, and the Society has just a contact who can escort them into the libraries of Heaven itself to uncover a powerful healing ritual. Navigating the customs and laws of Heaven is only the first of the challenges that faces the PCs, for they seek to purge demonic forces from Valais without raising the ire of Heaven's inhabitants or risking the fate of her soul."
+        },
+        {
+          "scenario_num": 7,
+          "season": 9,
+          "low_level": 7,
+          "high_level": 11,
+          "character_id": 0,
+          "title": "Salvation of the Sages",
+          "description": "For millennia an order of scholars known as the Jeweled Sages catalogued the wisdom and lore of northern Garund's greatest minds within crystalline artifacts. Though these sage jewels have recently resurfaced, so too has the new generation of sages learned that something else dwells within besides ancient memories. The entire order gathers where the Jeweled Sages truly began in order to confront their hidden past, purge an ancient evil that has haunted them for ages, and define the future of the Scarab Sages faction."
+        },
+        {
+          "scenario_num": 8,
+          "season": 9,
+          "low_level": 1,
+          "high_level": 5,
+          "character_id": 0,
+          "title": "Birthright Betrayed",
+          "description": "For all its rich history and heritage, Taldor has not always welcomed the Pathfinder Society's inquiring minds. This is especially true of a small museum in Ridonport, birthplace of the legendary General Arnisant, who confronted the dreaded Whispering Tyrant during the Shining Crusade. However, the Society's ally Lady Gloriana Morilla has secured a small group of Pathfinders a unique opportunity to study the museum's relics. All she needs in return is the Pathfinders' investigative skills to uncover the local earl's indiscretions—an earl who proudly identifies as Arnisant's direct descendant."
+        },
+        {
+          "scenario_num": 9,
+          "season": 9,
+          "low_level": 3,
+          "high_level": 7,
+          "character_id": 0,
+          "title": "Beyond the Halflight Path",
+          "description": "The sprawling maze of caverns and tunnels beneath the hilltop city of Kaer Maga are home to a host of dangers and mysteries. A dedicated group of guards called the Duskwardens is responsible for protecting Kaer Magans and visitors alike from everything that lurks below. Despite the Duskwardens' best efforts, the influence of one of the vaults has been spreading on to the streets of Kaer Maga. It falls to a group Pathfinder Society agents to navigate the factions of Kaer Maga to access and strike at the heart of the lurking threat."
+        },
+        {
+          "scenario_num": 10,
+          "season": 9,
+          "low_level": 1,
+          "high_level": 5,
+          "character_id": 0,
+          "title": "Signs in Senghor",
+          "description": "In the port of Senghor, it is taboo to even speak of the accursed ruin of Boali that sits on the other side of the bay, let alone to set foot in its rubble-strewn streets. Yet rumors have reached the Pathfinder Society that the Aspis Consortium has sent agents to search through this forbidden city. Although few people willingly travel to its shores, Boali is far from quiet. It falls to a small group Pathfinder agents to get the bottom of the Aspis plot without falling prey to the ruin's dangers. Can the PCs bring the Consortiums' true motives to light?"
+        },
+        {
+          "scenario_num": 11,
+          "season": 9,
+          "low_level": 5,
+          "high_level": 9,
+          "character_id": 0,
+          "title": "The Jarlsblood Witch Saga",
+          "description": "The Lands of the Linnorm Kings derive its name from its leaders, each of who can rule after slaying one of the massive, draconic linnorms that inhabit the region. Centuries ago, when a warrior set out to slay a dragon of her own and carve out a kingdom, she returned not with a linnorm's head but that of the local linnorm king. The lone witness insisted she had used ice magic and Irriseni witchcraft to kill the king, an accusation that led to the warrior's execution. It's said that even today, the so-called Jarlsblood Witch prowls the land and snatches up lone travelers.\n\nNot all believe these tales, most notably the warrior's descendants. One serves as a member of Taldor's Ulfen Guard and has contacted the Society to make a deal: exonerate his defamed ancestor in exchange for intelligence that could shape Taldor's future and avert a disaster. It's up to the PCs to embark into the frozen Lands of the Linnorm Kings to solve an ancient murder mystery, though there's far more at stake than honor."
+        },
+        {
+          "scenario_num": 12,
+          "season": 9,
+          "low_level": 1,
+          "high_level": 5,
+          "character_id": 0,
+          "title": "Shrine of the Sacred Tempest",
+          "description": "Outside of a remote village in the tengu nation of Kwanlai, a generations-old group of shrinekeepers has dutifully watched over a holy site that commemorates celestial forces that fell in battle against a qlippoth invasion in the distant past. By tradition, the guardians report to celestial forces every 10 years, but these guardians have fallen silent. A messenger from Heaven has called upon the Pathfinder Society to investigate the historic site and uncover the truth behind the shrinekeepers' fate."
+        },
+        {
+          "scenario_num": 13,
+          "season": 9,
+          "low_level": 7,
+          "high_level": 11,
+          "character_id": 0,
+          "title": "The Lion’s Justice",
+          "description": "Devious schemes are afoot in Oppara, the glittering capital of Taldor. As the city delights in a public holiday, Lady Gloriana Morilla and her allies have learned of an impending plot that could throw the whole nation into chaos. The PCs are uniquely poised to collaborate with Taldor's secretive Lion Blade spies to intercept the culprits in what promises to be a defining moment in Taldan history."
+        },
+        {
+          "scenario_num": 14,
+          "season": 9,
+          "low_level": 1,
+          "high_level": 5,
+          "character_id": 0,
+          "title": "Down the Verdant Path",
+          "description": "Few dare tread through the ancient groves of the Verduran Forest, and those who do settle in these woodlands tend to stay close to their communities. Mystery and danger rarely deter agents of the Pathfinder Society, however. When the semi-retired Pathfinder Falbin ventured from his home deep in the wood, he came across an unexpected pocket of flourishing growth and summer weather in the middle of the wintery forest. He fears that this disturbance is the work of a cabal of druids whose mayhem the Society ended six years ago. Have the druids returned to wreak havoc, or are other forces at play?"
+        },
+        {
+          "scenario_num": 15,
+          "season": 9,
+          "low_level": 3,
+          "high_level": 7,
+          "character_id": 0,
+          "title": "The Bloodcove Blockade",
+          "description": "The Aspis Consortium has poached relics from the Mwangi Expanse for decades, but the organization has recently identified a wealth of rare minerals deep in the Kaava Lands. The biggest catch is that the Society is familiar with this area, and a massive mining operation like the one the Consortium's planning wouldn't just disrupt local cultures; it risks unleashing a powerful fiend the Pathfinder Society narrowly kept sealed away.\n\nSuch a large operation is beyond the capacity of a few agents to stop. Instead, the Exchange is armed and ready to strangle Bloodcove's imports to shut down the Consortium's plan before it can inflict too much damage. For this maneuver to work, though, the Exchange needs allies and intelligence within Bloodcove, made all the more essential now that the Society's sole agent in Bloodcove has disappeared."
+        },
+        {
+          "scenario_num": 16,
+          "season": 9,
+          "low_level": 1,
+          "high_level": 5,
+          "character_id": 0,
+          "title": "Fallen Family, Broken Name",
+          "description": "The Goblinblood Wars that ravaged Isger more than a decade ago didn't just set fire to villages; it destroyed families. Among these was the wealthy Irrica family, all but one who perished during this tumultuous time. Now that Isger's government has begun declassifying reports, the Pathfinder Society has learned that the Irricas commanded some supernatural force that convinced even the mighty House Thrune to give them space. With these leads now public knowledge, the Society sends the PCs to piece together the broken family's history and recover this secret weapon before it falls into the wrong hands."
+        },
+        {
+          "scenario_num": 17,
+          "season": 9,
+          "low_level": 5,
+          "high_level": 9,
+          "character_id": 0,
+          "title": "Oath of the Overwatched",
+          "description": "Deep beneath the Blakros Museum lies a copper gate that no key could open—at least, not from the outside. To the horror of museum curator Nigel Aldain, the gate has begun to writhe and buckle. Whatever lurks beyond it will not remain contained for much longer. Aldain sent an urgent request for aid to Zarta Dralneen, leader of the Dark Archive faction. Dralneen quickly realized that protection would require a divided approach, with some remaining behind to guard Absalom from what pours out and others charging in to deal with the source. With the support of Aldain, Dralneen, and Venture-Captain Ambrus Valsin on guard behind them, the PCs rush beyond the twisted portal. Within, they uncover the true reason why the ancient mage Ralzeros made the place beyond the gate so hard to reach."
+        },
+        {
+          "scenario_num": 18,
+          "season": 9,
+          "low_level": 1,
+          "high_level": 5,
+          "character_id": 0,
+          "title": "Scourge of the Farheavens",
+          "description": "When the Worldwound opened, tearing apart Sarkoris with a flood of demons, thousands of Sarkorian refugees sought shelter in nearby lands. Those who found no solace with their neighbors traveled far to the east, into the wilds of Iobaria. Among these was the Farheaven clan, which settled in the forests and faded into obscurity over the past century. Now that the Mendevian Crusades have fought back the demons and reclaimed a large amount of territory, the Pathfinder Society's begun the difficult task of studying the Sarkorian ruins to piece back together their shattered traditions and recover lost heirlooms."
+        },
+        {
+          "scenario_num": 19,
+          "season": 9,
+          "low_level": 5,
+          "high_level": 9,
+          "character_id": 0,
+          "title": "Clash in Kaimuko Wood",
+          "description": "On a recent foray into Kwanlai, the Pathfinder Society learned that a conniving being from the Abyss has been targeting righteous communities on the border between the tengu nation and Tianjing to the south. In light of these discoveries, Venture–Captain Amara Li has asked the PCs to lead a company of tengu soldiers to a fort near the northern border of Tianjing to lend aid and provide information. When the PCs arrive at the fort, it quickly becomes apparent that all is not well. As blight and corruption creep out from Kaimuko Wood toward the fort, it falls to the PCs to rally their allies and lead the charge."
+        },
+        {
+          "scenario_num": 20,
+          "season": 9,
+          "low_level": 7,
+          "high_level": 11,
+          "character_id": 0,
+          "title": "Fury of the Final Blade",
+          "description": "Liberty's Edge faction leader Colson Maldris was so certain that Andoran's elites were ruining the country that he took drastic action, allying with the Gray Gardeners in a plot to kidnap several of them and bring them to Galt. Though the Gardeners promised Maldris that they would grant these individuals a fair trial and carry out any executions without the use of their infamous soul-trapping Final Blades, their word was not to be trusted. Now all of Maldris's kidnapping victims are scheduled to face the guillotine. Maldris has sent a desperate plea for help to the Pathfinder Society, hoping for aid in freeing his victims from this terrible fate. However, Maldris's efforts to lay the groundwork for a rescue plot have seen him captured as an enemy of the revolution."
+        },
+        {
+          "scenario_num": 21,
+          "season": 9,
+          "low_level": 3,
+          "high_level": 7,
+          "character_id": 0,
+          "title": "In the Grandmaster’s Name",
+          "description": "Two old allies-turned-enemies have taken shelter in a nigh-unassailable sanctum, yet the Pathfinder Society is committed to capturing them in Absalom's name. Rather than risk Pathfinders' lives in a reckless assault, the Society has turned to a different tool: misinformation. Both fugitives rely on intelligence provided by Grandmaster Torch, and Society operatives recently intercepted Torch's latest team of agents. Now it's up to the PCs to pose as the Grandmaster's employees, rendezvous with the fugitives' agent in Druma, and pass off forged documents that will spook the criminals into abandoning their sanctum. It should be easy, but what Druma lacks in marauding monsters, it more than makes up in deadly debts, old promises, and powerful kalistocrats."
+        },
+        {
+          "scenario_num": 22,
+          "season": 9,
+          "low_level": 1,
+          "high_level": 5,
+          "character_id": 0,
+          "title": "Grotto of the Deluged God",
+          "description": "When a ship that Venture-Captain Calisro Benarry hired to ferry Pathfinders to the Gloomspires vanished, she called upon diviners to speak to the sailors, only to learn that they had met a watery grave. Benarry has narrowed down the ship’s location to the shoals off the coast of the pirate island of Tempest Cay. While the venture-captain asks some questions on shore and searches for survivors, the PCs must travel out to the shipwreck, uncover the reason why a crew of experienced sailors met their doom, and discover why the nearby ocean has been growing increasingly perilous."
+        },
+        {
+          "scenario_num": 23,
+          "season": 9,
+          "low_level": 7,
+          "high_level": 11,
+          "character_id": 0,
+          "title": "The Ghol-Gan Heresy",
+          "description": "The Aspis Consortium and Vanji Prospectors’ Guild may have allied to extract valuable minerals from the tropical Kaava Lands, yet their endeavor also threatens to release a fiend sealed beneath the nearby ruins. The Pathfinder Society and its new friends have strangled the operation economically, causing most of the workers to abandon the dig. However, a dedicated corps is trying to dig out one last lucrative (and perilous) haul before evacuating the site. The PCs range deep into the jungles alongside their grippli allies to stop the Aspis—and perhaps confront the same fiend imprisoned millennia ago."
         }
       ]);
     });
