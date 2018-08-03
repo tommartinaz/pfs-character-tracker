@@ -7,7 +7,6 @@ exports.up = function(knex, Promise) {
         table.integer('high_level');
         table.text('description');
         table.string('title');
-        table.integer('character_id');
         table.timestamps(true, true)
     })
 };

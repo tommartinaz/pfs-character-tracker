@@ -6,6 +6,8 @@ exports.up = function(knex, Promise) {
         table.integer('class_id');
         table.integer('alignment_id');
         table.integer('level').defaultTo(1);
+        table.integer('player_id');
+        table.integer('char_num');
         table.timestamps(true, true);
     })
 };
