@@ -23,12 +23,8 @@ app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/', index);
-app.use('/characters', characters);
-app.use('/scenarios', scenarios);
-app.use('/races', races);
-app.use('/alignments', alignments);
-app.use('/classes', classes);
+const routes_setter = require('./config/routes');
+routes_setter(app);
 
 app.listen(port, function() {
 console.log("listening on port: ", port);
