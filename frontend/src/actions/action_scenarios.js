@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8000/scenarios';
+const BASE_URL = 'http://localhost:8000/api/scenarios';
 
 export const getAllScenarios = () => {
     return {

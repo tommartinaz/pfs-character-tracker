@@ -1,11 +1,11 @@
 import axios from 'axios'
 
-const BASE_URL = 'http://localhost:8000/characters'
+const BASE_URL = 'http://localhost:8000/api/characters'
 
 export const getAllChars = () => {
     return {
         type: "GET_ALL_CHARS",
-        payload: axios.get(`${BASE_URL}/details`)
+        payload: axios.get(`${BASE_URL}`)
     }
 }
 
